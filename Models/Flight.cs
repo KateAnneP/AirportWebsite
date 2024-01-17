@@ -19,13 +19,29 @@ namespace projekt.Models
         [StringLength(50)]
         [Display(Name = "Linia lotnicza")]
         public string Line { get; set; }
+
+        [Display(Name = "Data i godzina wylotu/przylotu")]
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}")]
         public DateTime DateAndTime { get; set; }
-        public int StatusID { get; set; } /*klucz obcy do Status*/
-        public int TerminalID { get; set; } /*klucz obcy do Terminal*/
-        public int AircraftID { get; set; }     /*klucz obcy do Aircraft*/
-        public int StaffID { get; set; }    /*klucz obcy do Staff*/
-        public int PassengerID { get; set; }    /*klucz obcy do Passengers*/
-        public int DestinationID { get; set; }  /*klucz obcy do Destination*/
+        
+        [ForeignKey("StatusID")]
+        public int? StatusID { get; set; } /*klucz obcy do Status*/
+
+        [ForeignKey("TerminalID")]
+        public int? TerminalID { get; set; } /*klucz obcy do Terminal*/
+
+        [ForeignKey("AircraftID")]
+        public int? AircraftID { get; set; }     /*klucz obcy do Aircraft*/
+
+        [ForeignKey("StaffID")]
+        public int? StaffID { get; set; }    /*klucz obcy do Staff*/
+
+        [ForeignKey("PassengerID")]
+        public int? PassengerID { get; set; }    /*klucz obcy do Passengers*/
+
+        [ForeignKey("DestinationID")]
+        public int? DestinationID { get; set; }  /*klucz obcy do Destination*/
 
 
     }
