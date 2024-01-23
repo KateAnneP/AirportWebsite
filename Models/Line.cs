@@ -20,10 +20,8 @@ namespace projekt.Models
         [Display(Name = "Skrót")]
         public string Shortcut { get; set; }
 
-        /*Przemyśl to jeszcze*/
-        /*[ForeignKey("PlaneID")]
-        public int? PlaneID { get; set; }*/
-
         public virtual ICollection<Flight> Flights { get; set; }
+
+        public virtual ICollection<LinePlane> LinePlanes { get; set; }
     }
 }

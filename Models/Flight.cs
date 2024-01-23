@@ -30,13 +30,7 @@ namespace projekt.Models
         public int? TerminalID { get; set; } /*klucz obcy do Terminal*/
 
         [ForeignKey("PlaneID")]
-        public int? PlaneID { get; set; }     /*klucz obcy do Plane*/
-
-        /*[ForeignKey("StaffID")]
-        public int? StaffID { get; set; }*/    /*klucz obcy do Staff*/
-
-        /*[ForeignKey("PassengerID")]
-        public int? PassengerID { get; set; } */   /*klucz obcy do Passengers*/
+        public int? PlaneID { get; set; }     /*klucz obcy do Plane*/     
 
         [ForeignKey("DestinationID")]
         public int? DestinationID { get; set; }  /*klucz obcy do Destination*/
@@ -55,5 +49,7 @@ namespace projekt.Models
 
         [Display(Name = "Cel lotu")]
         public virtual Destination Destination { get; set; }
+        public virtual ICollection<FlightPassenger> FlightPassengers { get; set; }
+        public virtual ICollection<FlightStaff> FlightStaffs { get; set; }
     }
 }

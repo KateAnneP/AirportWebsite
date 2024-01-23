@@ -21,6 +21,7 @@ namespace projekt.Models
         public string Shortcut { get; set; }
 
         public virtual ICollection<Flight> Flights { get; set; }
+        public virtual ICollection<LinePlane> LinePlanes { get; set; }
 
     }
 }
