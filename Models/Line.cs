@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace projekt.Models
 {
-    [Table("Destinations")]
-    public class Destination
+    [Table("Lines")]
+    public class Line
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -12,19 +12,18 @@ namespace projekt.Models
 
         [Required]
         [StringLength(50)]
-        [Display(Name = "Nazwa miasta")]
-        public string City { get; set; }    /*nazwa miasta*/
+        [Display(Name = "Nazwa linii")]
+        public string Name { get; set; }    /*nazwa linii*/
 
         [Required]
-        [StringLength(3)]
+        [StringLength(10)]
         [Display(Name = "Skrót")]
         public string Shortcut { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        [Display(Name = "Kraj")]
-        public string Country { get; set; }
+        /*Przemyśl to jeszcze*/
+        /*[ForeignKey("PlaneID")]
+        public int? PlaneID { get; set; }*/
 
-        public virtual ICollection<Flight> Flights { get; set; } //Loty do tej lokacji
+        public virtual ICollection<Flight> Flights { get; set; }
     }
 }

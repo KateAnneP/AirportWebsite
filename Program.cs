@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using projekt.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<projektContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("projektContext") ?? throw new InvalidOperationException("Connection string 'projektContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
