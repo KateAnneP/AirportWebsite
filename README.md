@@ -1,10 +1,9 @@
-Lotnisko:
-
-- Loty: data, godzina, linia lotnicza, samolot. destynacja, (pasażerowie,  pracownicy przy bramce, personel naziemny, personel bagażowy)
-(- Pasażerowie: imię, nazwisko, data urodzenia, rodzaj dokumentu, numer dokumentu)
+Tabele w bazie:
+- Loty: data, godzina, linia lotnicza, samolot. destynacja, (pasażerowie,  pracownicy)
+- Pasażerowie: imię, nazwisko, obywatelstwo, numer dokumentu
 - Linie lotnicze: skrót, nazwa, samoloty
 - Desytnacje: nazwa miasta, skrót, kraj
 - Statusy: id, opis
 - Terminale: id, nazwa
 - Samoloty: id, nazwa, oznaczenie
-(- Pracownicy: imię, nazwisko, stanowisko)
+- Pracownicy: imię, nazwisko, stanowisko
