@@ -13,12 +13,17 @@ namespace projekt.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Passenger()
+        {
+            return View(new Passenger);
+        }
+
+        public IActionResult Przyloty()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Odloty()
         {
             return View();
         }
