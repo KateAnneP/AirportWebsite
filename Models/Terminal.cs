@@ -13,9 +13,9 @@ namespace projekt.Models
         [Required]
         [StringLength(100)]
         [Display(Name = "Opis")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
-        public virtual ICollection<Flight> Flights { get; set; }
+        public virtual ICollection<Flight>? Flights { get; set; }
 
     }
 }

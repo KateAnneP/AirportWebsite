@@ -20,20 +20,21 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Passenger">Passenger</a>
+                            <a class="nav-link btn_nav" asp-area="" asp-controller="Home" asp-action="Passenger">Passenger</a>
                         </li>
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <a class="btn btn_nav dropdown-toggle" type="button" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Maintenence
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" asp-controller="Home" asp-action="Passenger">Staff</a>
+                              <a class="dropdown-item" asp-controller="Staffs" asp-action="Index">Staff</a>
+                                <a class="dropdown-item" asp-controller="Passengers" asp-action="Index">Passengers</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" asp-controller="Lines" asp-action="Index">Lines</a>
                               <a class="dropdown-item" asp-controller="Flights" asp-action="Index">Flights</a>
-                              <a class="dropdown-item" asp-controller="Terminals" asp-action="Passenger">Terminals</a>
-                              <a class="dropdown-item" asp-controller="Home" asp-action="Passenger">Statuses</a>
-                              <a class="dropdown-item" asp-controller="Home" asp-action="Passenger">Planes</a>
+                              <a class="dropdown-item" asp-controller="Terminals" asp-action="Index">Terminals</a>
+                              <a class="dropdown-item" asp-controller="Status" asp-action="Index">Statuses</a>
+                              <a class="dropdown-item" asp-controller="Planes" asp-action="Index">Planes</a>
                             </div>
                         </li>
                     </ul>

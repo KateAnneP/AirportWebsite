@@ -13,15 +13,15 @@ namespace projekt.Models
         [Required]
         [StringLength(50)]
         [Display(Name = "Model samolotu")]
-        public string Model { get; set; }
+        public string? Model { get; set; }
 
         [Required]
         [StringLength(10)]
         [Display(Name = "Skrót")]
-        public string Shortcut { get; set; }
+        public string? Shortcut { get; set; }
 
-        public virtual ICollection<Flight> Flights { get; set; }
-        public virtual ICollection<LinePlane> LinePlanes { get; set; }
+        public virtual ICollection<Flight>? Flights { get; set; }
+        public virtual ICollection<LinePlane>? LinePlanes { get; set; }
 
     }
 }

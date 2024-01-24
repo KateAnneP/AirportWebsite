@@ -10,9 +10,9 @@ namespace projekt.Models
         public int FlightStaffID { get; set; }
 
         public int FlightId { get; set; }
-        public Flight Flight { get; set; }
+        public Flight? Flight { get; set; }
 
         public int StaffId { get; set; }
-        public Staff Staff { get; set; }
+        public Staff? Staff { get; set; }
     }
 }

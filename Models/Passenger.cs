@@ -13,23 +13,23 @@ namespace projekt.Models
         [Required]
         [StringLength(50)]
         [Display(Name = "Imię")]
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
 
         [Required]
         [StringLength(50)]
         [Display(Name = "Nazwisko")]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [Required]
         [StringLength(9)]
         [Display(Name = "Numer dokumentu")]
-        public string IDCardNumber { get; set; }
+        public string? IDCardNumber { get; set; }
 
         [Required]
         [StringLength(20)]
         [Display(Name = "Obywatelstwo")]
-        public string Citizenship { get; set; }
+        public string? Citizenship { get; set; }
 
-        public virtual ICollection<FlightPassenger> FlightPassengers { get; set; }
+        public virtual ICollection<FlightPassenger>? FlightPassengers { get; set; }
     }
 }

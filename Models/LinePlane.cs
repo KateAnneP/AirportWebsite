@@ -12,10 +12,10 @@ namespace projekt.Models
         public int LinePlaneID { get; set; }
 
         public int LineId { get; set; }
-        public Line Line { get; set; }
+        public Line? Line { get; set; }
 
         public int PlaneId { get; set; }
-        public Plane Plane { get; set; }
+        public Plane? Plane { get; set; }
 
     }
 }

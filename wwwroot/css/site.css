@@ -18,8 +18,18 @@ body {
 }
 
 .btn1 {
-    height: 100px;
+    height: 50px;
     width: 100px;
-    background-color: grey;
+    background-color: lightgray;
     color: black;
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+btn_nav {
+    color: lightgray;
+}
+
+a {
+    color: white;
 }

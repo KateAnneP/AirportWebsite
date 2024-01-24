@@ -13,12 +13,12 @@ namespace projekt.Models
         [Required]
         [StringLength(10)]
         [Display(Name = "Numer lotu")]
-        public string Number { get; set; }    /*numer lotu*/
+        public string? Number { get; set; }    /*numer lotu*/
 
         [Display(Name = "Data i godzina wylotu/przylotu")]
         [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}")]
-        public DateTime DateAndTime { get; set; }
+        public DateTime? DateAndTime { get; set; }
 
         [ForeignKey("LineID")]
         public int? LineID { get; set; }
@@ -36,20 +36,20 @@ namespace projekt.Models
         public int? DestinationID { get; set; }  /*klucz obcy do Destination*/
 
         [Display(Name = "Status lotu")]
-        public virtual Line Line { get; set; }
+        public virtual Line? Line { get; set; }
 
         [Display(Name = "Status lotu")]
-        public virtual Status Status { get; set; }
+        public virtual Status? Status { get; set; }
 
         [Display(Name = "Terminal do odprawy/wyjścia")]
-        public virtual Terminal Terminal { get; set; }
+        public virtual Terminal? Terminal { get; set; }
 
         [Display(Name = "Samolot")]
-        public virtual Plane Plane { get; set; }
+        public virtual Plane? Plane { get; set; }
 
         [Display(Name = "Cel lotu")]
-        public virtual Destination Destination { get; set; }
-        public virtual ICollection<FlightPassenger> FlightPassengers { get; set; }
-        public virtual ICollection<FlightStaff> FlightStaffs { get; set; }
+        public virtual Destination? Destination { get; set; }
+        public virtual ICollection<FlightPassenger>? FlightPassengers { get; set; }
+        public virtual ICollection<FlightStaff>? FlightStaffs { get; set; }
     }
 }
