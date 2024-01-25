@@ -22,6 +22,24 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Shortcut)
         </dd>
+        <dt class="col-sm-2">
+            Flota
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.LinePlanes != null && Model.LinePlanes.Any())
+            {
+                <ul>
+                    @foreach (var plane in Model.LinePlanes)
+                    {
+                        <li>@plane.PlaneId</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>This line does not have planes assigned.</p>
+            }
+        </dd>
     </dl>
 </div>
 <div>

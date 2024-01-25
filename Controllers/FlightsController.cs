@@ -40,6 +40,8 @@ namespace projekt.Controllers
                 .Include(f => f.Plane)
                 .Include(f => f.Status)
                 .Include(f => f.Terminal)
+                .Include(f => f.FlightPassengers)
+                .Include(f => f.FlightStaffs)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (flight == null)
             {

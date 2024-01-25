@@ -36,6 +36,7 @@ namespace projekt.Controllers
             }
 
             var line = await _context.Line
+                .Include(f => f.LinePlanes)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (line == null)
             {
