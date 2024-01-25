@@ -18,9 +18,18 @@ body {
 }
 
 .btn1 {
-    height: 50px;
-    width: 100px;
+    text-decoration: none;
+    padding: 10px;
     background-color: lightgray;
+    color: black;
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+.btn2 {
+    text-decoration: none;
+    padding: 10px;
+    background-color: red;
     color: black;
     border-width: 0px;
     border-radius: 10px;
@@ -32,4 +41,8 @@ btn_nav {
 
 a {
     color: white;
+}
+
+.table > :not(caption) > * > * {
+    padding: 1rem 0.5rem;
 }

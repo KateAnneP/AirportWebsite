@@ -7,11 +7,12 @@
 <div class="text-center">
     <div class="row">
         <div>
-            <a class="btn1" asp-area="" asp-controller="Home" asp-action="Odloty">Odloty</a>
-            <a class="btn1" asp-area="" asp-controller="Home" asp-action="Przyloty">Przyloty</a>
+            <a class="btn1 desc" asp-area="" asp-controller="Home" asp-action="Index">Wszystkie loty</a>
+            <a class="btn1 desc" asp-area="" asp-controller="Home" asp-action="Odloty">Odloty</a>
+            <a class="btn1 desc" asp-area="" asp-controller="Home" asp-action="Przyloty">Przyloty</a>
         </div>
     </div>
-    <h4>Wszystkie loty:</h4>
+    <h4 id="pole_do_desc" class="mt-3"">Lista lotów:</h4>
     <hr />
     <table class="table">
         <thead>

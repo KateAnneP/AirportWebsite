@@ -4,9 +4,9 @@
     ViewData["Title"] = "Flight Details";
 }
 
-<h1>Flights</h1>
+<h2>Flights</h2>
 
-<div>
+<div class="mt-1">
     <h4>Flight</h4>
     <hr />
     <dl class="row">
@@ -55,6 +55,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn1" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a class="btn1" asp-action="Index">Back to List</a>
 </div>

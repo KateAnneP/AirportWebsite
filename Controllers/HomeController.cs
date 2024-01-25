@@ -23,34 +23,17 @@ namespace projekt.Controllers
             return View(await projektContext.ToListAsync());
         }
 
-        public IActionResult Passenger()
-        {
-            return View();
-        }
-
         public IActionResult Przyloty()
         {
-            /*var przylotyFlights = _context.Flight
-        .Where(f => f.StatusID == 3)
-        .ToList();*/
-
-            // Uzyskaj model dla widoku Index, używając tego samego podejścia co w funkcji Index
             var indexModel = _context.Flight.Include(f => f.Destination).Include(f => f.Line).Include(f => f.Plane).Include(f => f.Status).Include(f => f.Terminal).Where(f => f.StatusID == 4 || f.StatusID == 5).ToList();
 
-            // Zwróć widok, przekazując model z funkcji Index
             return View("Index", indexModel);
         }
 
         public IActionResult Odloty()
         {
-            /*var przylotyFlights = _context.Flight
-        .Where(f => f.StatusID != 3)
-        .ToList();*/
-
-            // Uzyskaj model dla widoku Index, używając tego samego podejścia co w funkcji Index
             var indexModel = _context.Flight.Include(f => f.Destination).Include(f => f.Line).Include(f => f.Plane).Include(f => f.Status).Include(f => f.Terminal).Where(f => f.StatusID != 4 && f.StatusID != 5).ToList();
 
-            // Zwróć widok, przekazując model z funkcji Index
             return View("Index", indexModel);
         }
 
