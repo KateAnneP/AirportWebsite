@@ -4,6 +4,9 @@ Strona główna, na której wyświetlone są loty:
 Tabela z wybranymi przylotami:
 ![image](https://github.com/KateAnneP/AirportWebsite/assets/103559451/9d78eb12-614e-42eb-9852-7738e14f2c75)
 
+Szczegóły dotyczące linii lotniczej wraz z przypisanymi samolotami:
+![image](https://github.com/KateAnneP/AirportWebsite/assets/103559451/8c80fed0-30d3-4ec3-91fd-7469d8a38382)
+
 Modele w projekcie:
 - Loty: numer, data, godzina, linia lotnicza, samolot, cel lotu, pasażerowie,  pracownicy
 - Pasażerowie: imię, nazwisko, obywatelstwo, numer dokumentu
