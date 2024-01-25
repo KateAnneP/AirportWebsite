@@ -50,7 +50,7 @@ namespace projekt.Controllers
         public IActionResult Create()
         {
             ViewData["FlightId"] = new SelectList(_context.Flight, "Id", "Number");
-            ViewData["PassengerId"] = new SelectList(_context.Set<Passenger>(), "Id", "Citizenship");
+            ViewData["PassengerId"] = new SelectList(_context.Set<Passenger>(), "Id", "LastName");
             return View();
         }
 
